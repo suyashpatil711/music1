@@ -1,4 +1,5 @@
 import React from "react";
+import { URL } from '../../config'
 class UploadFile extends React.Component {
 	
 	constructor(props) {
@@ -19,7 +20,7 @@ class UploadFile extends React.Component {
 		let data = new FormData();
 		data.append('file', this.state.file);
 
-		fetch('http://localhost:8080/upload', {
+		fetch(`${URL}/upload`, {
 			method: 'POST',
 			body: data,
            // headers: { "Content-Type": "multipart/form-data" },
