@@ -29,8 +29,8 @@ function App() {
   return (
    
     <div className="container">
-      <BrowserRouter>
-
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        
         <Routes>         
         <Route exact path="/" element={<Signin />} />
           <Route exact path="/Signin" element={<Signin />} />
